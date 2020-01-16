@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="welcome" translatesAutoresizingMaskIntoConstraints="NO" id="3aj-GT-OSn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play_puzzle_logo" translatesAutoresizingMaskIntoConstraints="NO" id="hrf-Vc-AF7">
+                                <rect key="frame" x="44" y="361" width="326" height="174"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="326" id="5kD-tJ-35T"/>
+                                    <constraint firstAttribute="height" constant="174" id="bUk-SY-ieV"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3aj-GT-OSn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KQB-nb-7UL"/>
+                            <constraint firstItem="3aj-GT-OSn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="L0P-4U-pCx"/>
+                            <constraint firstItem="hrf-Vc-AF7" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="eGB-M7-JIw"/>
+                            <constraint firstItem="3aj-GT-OSn" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="ozW-a5-iXi"/>
+                            <constraint firstAttribute="bottom" secondItem="3aj-GT-OSn" secondAttribute="bottom" constant="4.5474735088646412e-13" id="x7Q-W5-bg2"/>
+                            <constraint firstItem="hrf-Vc-AF7" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="xab-RL-qcM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="play_puzzle_logo" width="479" height="129"/>
+        <image name="welcome" width="2500" height="1667"/>
+    </resources>
+</document>

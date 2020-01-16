@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F61EE7AE23AA55F000440A8C /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61EE7AD23AA55F000440A8C /* Tile.swift */; };
+		F62DB630239E3C6E009AE655 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62DB62F239E3C6E009AE655 /* AppDelegate.swift */; };
+		F62DB632239E3C6E009AE655 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62DB631239E3C6E009AE655 /* SceneDelegate.swift */; };
+		F62DB634239E3C6E009AE655 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62DB633239E3C6E009AE655 /* GameController.swift */; };
+		F62DB637239E3C6E009AE655 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F62DB635239E3C6E009AE655 /* Main.storyboard */; };
+		F62DB639239E3C6F009AE655 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F62DB638239E3C6F009AE655 /* Assets.xcassets */; };
+		F62DB63C239E3C6F009AE655 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F62DB63A239E3C6F009AE655 /* LaunchScreen.storyboard */; };
+		F6733AEE23CC70720034B6BB /* Obvia-Reg.otf in Resources */ = {isa = PBXBuildFile; fileRef = F6733AED23CC6F8F0034B6BB /* Obvia-Reg.otf */; };
+		F6733AEF23CC70770034B6BB /* Obvia-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = F6733AEC23CC6F100034B6BB /* Obvia-Light.otf */; };
+		F6733AF023CC707A0034B6BB /* Obvia-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = F6733AEB23CC6F100034B6BB /* Obvia-Thin.otf */; };
+		F6733AF323CC713D0034B6BB /* Obvia-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F6733AF123CC71200034B6BB /* Obvia-Bold.otf */; };
+		F6733AF523CC717E0034B6BB /* Obvia-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F6733AF423CC717E0034B6BB /* Obvia-Medium.otf */; };
+		F680F82D23BFA8A100187721 /* GameHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F680F82C23BFA8A100187721 /* GameHelper.swift */; };
+		F6F0656F23C46FC400962E0C /* ResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F0656E23C46FC400962E0C /* ResultController.swift */; };
+		F6F0657123C4729400962E0C /* PreparationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F0657023C4729400962E0C /* PreparationController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F61EE7AD23AA55F000440A8C /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		F62DB62C239E3C6E009AE655 /* Play Puzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Play Puzzle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F62DB62F239E3C6E009AE655 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F62DB631239E3C6E009AE655 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F62DB633239E3C6E009AE655 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		F62DB636239E3C6E009AE655 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F62DB638239E3C6F009AE655 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F62DB63B239E3C6F009AE655 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F62DB63D239E3C6F009AE655 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6733AEB23CC6F100034B6BB /* Obvia-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Obvia-Thin.otf"; sourceTree = "<group>"; };
+		F6733AEC23CC6F100034B6BB /* Obvia-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Obvia-Light.otf"; sourceTree = "<group>"; };
+		F6733AED23CC6F8F0034B6BB /* Obvia-Reg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Obvia-Reg.otf"; sourceTree = "<group>"; };
+		F6733AF123CC71200034B6BB /* Obvia-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Obvia-Bold.otf"; sourceTree = "<group>"; };
+		F6733AF423CC717E0034B6BB /* Obvia-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Obvia-Medium.otf"; sourceTree = "<group>"; };
+		F680F82C23BFA8A100187721 /* GameHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHelper.swift; sourceTree = "<group>"; };
+		F6F0656E23C46FC400962E0C /* ResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultController.swift; sourceTree = "<group>"; };
+		F6F0657023C4729400962E0C /* PreparationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparationController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F62DB629239E3C6E009AE655 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F62DB623239E3C6E009AE655 = {
+			isa = PBXGroup;
+			children = (
+				F62DB62E239E3C6E009AE655 /* Play-Puzzle */,
+				F62DB62D239E3C6E009AE655 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F62DB62D239E3C6E009AE655 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F62DB62C239E3C6E009AE655 /* Play Puzzle.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F62DB62E239E3C6E009AE655 /* Play-Puzzle */ = {
+			isa = PBXGroup;
+			children = (
+				F680F82823BFA81900187721 /* Model */,
+				F680F82923BFA82700187721 /* View */,
+				F680F82A23BFA83600187721 /* Controller */,
+				F62DB638239E3C6F009AE655 /* Assets.xcassets */,
+				F680F82B23BFA85200187721 /* Supporting files */,
+				F62DB63D239E3C6F009AE655 /* Info.plist */,
+			);
+			path = "Play-Puzzle";
+			sourceTree = "<group>";
+		};
+		F680F82823BFA81900187721 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F61EE7AD23AA55F000440A8C /* Tile.swift */,
+				F680F82C23BFA8A100187721 /* GameHelper.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F680F82923BFA82700187721 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F62DB635239E3C6E009AE655 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F680F82A23BFA83600187721 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F6F0657023C4729400962E0C /* PreparationController.swift */,
+				F62DB633239E3C6E009AE655 /* GameController.swift */,
+				F6F0656E23C46FC400962E0C /* ResultController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F680F82B23BFA85200187721 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				F6733AF423CC717E0034B6BB /* Obvia-Medium.otf */,
+				F6733AF123CC71200034B6BB /* Obvia-Bold.otf */,
+				F6733AED23CC6F8F0034B6BB /* Obvia-Reg.otf */,
+				F6733AEC23CC6F100034B6BB /* Obvia-Light.otf */,
+				F6733AEB23CC6F100034B6BB /* Obvia-Thin.otf */,
+				F62DB631239E3C6E009AE655 /* SceneDelegate.swift */,
+				F62DB62F239E3C6E009AE655 /* AppDelegate.swift */,
+				F62DB63A239E3C6F009AE655 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F62DB62B239E3C6E009AE655 /* Play-Puzzle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F62DB640239E3C6F009AE655 /* Build configuration list for PBXNativeTarget "Play-Puzzle" */;
+			buildPhases = (
+				F62DB628239E3C6E009AE655 /* Sources */,
+				F62DB629239E3C6E009AE655 /* Frameworks */,
+				F62DB62A239E3C6E009AE655 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Play-Puzzle";
+			productName = Gridly;
+			productReference = F62DB62C239E3C6E009AE655 /* Play Puzzle.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F62DB624239E3C6E009AE655 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "Bjørn Lau Jørgensen";
+				TargetAttributes = {
+					F62DB62B239E3C6E009AE655 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+				};
+			};
+			buildConfigurationList = F62DB627239E3C6E009AE655 /* Build configuration list for PBXProject "Play-Puzzle" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F62DB623239E3C6E009AE655;
+			productRefGroup = F62DB62D239E3C6E009AE655 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F62DB62B239E3C6E009AE655 /* Play-Puzzle */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F62DB62A239E3C6E009AE655 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6733AEE23CC70720034B6BB /* Obvia-Reg.otf in Resources */,
+				F6733AEF23CC70770034B6BB /* Obvia-Light.otf in Resources */,
+				F62DB63C239E3C6F009AE655 /* LaunchScreen.storyboard in Resources */,
+				F62DB639239E3C6F009AE655 /* Assets.xcassets in Resources */,
+				F6733AF323CC713D0034B6BB /* Obvia-Bold.otf in Resources */,
+				F6733AF023CC707A0034B6BB /* Obvia-Thin.otf in Resources */,
+				F6733AF523CC717E0034B6BB /* Obvia-Medium.otf in Resources */,
+				F62DB637239E3C6E009AE655 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F62DB628239E3C6E009AE655 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F680F82D23BFA8A100187721 /* GameHelper.swift in Sources */,
+				F6F0657123C4729400962E0C /* PreparationController.swift in Sources */,
+				F62DB634239E3C6E009AE655 /* GameController.swift in Sources */,
+				F6F0656F23C46FC400962E0C /* ResultController.swift in Sources */,
+				F61EE7AE23AA55F000440A8C /* Tile.swift in Sources */,
+				F62DB630239E3C6E009AE655 /* AppDelegate.swift in Sources */,
+				F62DB632239E3C6E009AE655 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F62DB635239E3C6E009AE655 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F62DB636239E3C6E009AE655 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F62DB63A239E3C6F009AE655 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F62DB63B239E3C6F009AE655 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F62DB63E239E3C6F009AE655 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F62DB63F239E3C6F009AE655 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F62DB641239E3C6F009AE655 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SBGL4S82U2;
+				INFOPLIST_FILE = "Play-Puzzle/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "art.bjornlau.Play-Puzzle";
+				PRODUCT_NAME = "Play Puzzle";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F62DB642239E3C6F009AE655 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SBGL4S82U2;
+				INFOPLIST_FILE = "Play-Puzzle/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "art.bjornlau.Play-Puzzle";
+				PRODUCT_NAME = "Play Puzzle";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F62DB627239E3C6E009AE655 /* Build configuration list for PBXProject "Play-Puzzle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F62DB63E239E3C6F009AE655 /* Debug */,
+				F62DB63F239E3C6F009AE655 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F62DB640239E3C6F009AE655 /* Build configuration list for PBXNativeTarget "Play-Puzzle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F62DB641239E3C6F009AE655 /* Debug */,
+				F62DB642239E3C6F009AE655 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F62DB624239E3C6E009AE655 /* Project object */;
+}
