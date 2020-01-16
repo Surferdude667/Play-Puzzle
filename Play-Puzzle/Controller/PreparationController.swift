@@ -17,9 +17,11 @@ class PreparationController: UIViewController, UIImagePickerControllerDelegate, 
     var buttonHeight: CGFloat = 40.0
     var buttonSpacer: CGFloat = 15.0
     
-    private var compactConstraints: [NSLayoutConstraint] = []
-    private var regularConstraints: [NSLayoutConstraint] = []
     private var sharedConstraints: [NSLayoutConstraint] = []
+    private var iPhonePortraitConstraints: [NSLayoutConstraint] = []
+    private var iPhoneLandscapeConstraints: [NSLayoutConstraint] = []
+    private var iPadPortraitConstraints: [NSLayoutConstraint] = []
+    private var iPadLandscapeConstraints: [NSLayoutConstraint] = []
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -122,11 +124,6 @@ class PreparationController: UIViewController, UIImagePickerControllerDelegate, 
             viewContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
             viewContainer.topAnchor.constraint(equalTo: view.topAnchor, constant: 15),
             
-            logo.centerYAnchor.constraint(equalTo: viewContainer.centerYAnchor, constant: -90),
-            logo.centerXAnchor.constraint(equalTo: viewContainer.centerXAnchor),
-            logo.widthAnchor.constraint(equalTo: viewContainer.widthAnchor, constant: -70),
-            logo.heightAnchor.constraint(equalToConstant: 150.0),
-            
             randomButton.topAnchor.constraint(equalTo: logo.bottomAnchor, constant: 40),
             randomButton.centerXAnchor.constraint(equalTo: viewContainer.centerXAnchor),
             randomButton.widthAnchor.constraint(equalToConstant: buttonWidth),
@@ -146,39 +143,71 @@ class PreparationController: UIViewController, UIImagePickerControllerDelegate, 
             cameraButton.heightAnchor.constraint(equalToConstant: buttonHeight)
         ])
         
-        regularConstraints.append(contentsOf: [
-            // Regular constraints
+        
+        iPhonePortraitConstraints.append(contentsOf: [
+            logo.centerYAnchor.constraint(equalTo: viewContainer.centerYAnchor, constant: -90),
+            logo.centerXAnchor.constraint(equalTo: viewContainer.centerXAnchor),
+            logo.widthAnchor.constraint(equalTo: viewContainer.widthAnchor, constant: -70),
+            logo.heightAnchor.constraint(equalToConstant: 150.0),
         ])
         
-        compactConstraints.append(contentsOf: [
-            //  Compact constraints
+        
+        iPhoneLandscapeConstraints.append(contentsOf: [
+           logo.centerYAnchor.constraint(equalTo: viewContainer.centerYAnchor, constant: -90),
+           logo.centerXAnchor.constraint(equalTo: viewContainer.centerXAnchor),
+           logo.widthAnchor.constraint(equalTo: viewContainer.widthAnchor),
+           logo.heightAnchor.constraint(equalToConstant: 100.0),
         ])
+        
+        iPadPortraitConstraints.append(contentsOf: iPhonePortraitConstraints)
+
+        iPadLandscapeConstraints.append(contentsOf: iPhoneLandscapeConstraints)
     }
     
     
-    func layoutTrait(traitCollection:UITraitCollection) {
-        if (!sharedConstraints[0].isActive) {
-            // activating shared constraints
-            NSLayoutConstraint.activate(sharedConstraints)
-        }
-        if traitCollection.horizontalSizeClass == .compact && traitCollection.verticalSizeClass == .regular {
-            if regularConstraints.count > 0 && regularConstraints[0].isActive {
-                NSLayoutConstraint.deactivate(regularConstraints)
+    func updateConstraints() {
+        NSLayoutConstraint.activate(sharedConstraints)
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone:
+            //  iPhone Landscape
+            if UIScreen.main.bounds.height < UIScreen.main.bounds.width {
+                print("iPhone Landscape")
+                NSLayoutConstraint.deactivate(iPhonePortraitConstraints)
+                NSLayoutConstraint.deactivate(iPadLandscapeConstraints)
+                NSLayoutConstraint.deactivate(iPadPortraitConstraints)
+                NSLayoutConstraint.activate(iPhoneLandscapeConstraints)
+            } else {
+                print("iPhone Portrait")
+                NSLayoutConstraint.deactivate(iPhoneLandscapeConstraints)
+                NSLayoutConstraint.deactivate(iPadPortraitConstraints)
+                NSLayoutConstraint.deactivate(iPadLandscapeConstraints)
+                NSLayoutConstraint.activate(iPhonePortraitConstraints)
             }
-            // activating compact constraints
-            NSLayoutConstraint.activate(compactConstraints)
-        } else {
-            if compactConstraints.count > 0 && compactConstraints[0].isActive {
-                NSLayoutConstraint.deactivate(compactConstraints)
+       
+        case .pad:
+            //  iPad Landscape
+            if UIScreen.main.bounds.height < UIScreen.main.bounds.width {
+                print("iPad Landscape")
+                NSLayoutConstraint.deactivate(iPhonePortraitConstraints)
+                NSLayoutConstraint.deactivate(iPhoneLandscapeConstraints)
+                NSLayoutConstraint.deactivate(iPadPortraitConstraints)
+                NSLayoutConstraint.activate(iPadLandscapeConstraints)
+            } else {
+                print("iPad Portrait")
+                //  iPad Portrait
+                NSLayoutConstraint.deactivate(iPadLandscapeConstraints)
+                NSLayoutConstraint.deactivate(iPhoneLandscapeConstraints)
+                NSLayoutConstraint.deactivate(iPhonePortraitConstraints)
+                NSLayoutConstraint.activate(iPadPortraitConstraints)
             }
-            // activating regular constraints
-            NSLayoutConstraint.activate(regularConstraints)
+        default:
+            break
         }
     }
     
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        super.traitCollectionDidChange(previousTraitCollection)
-        layoutTrait(traitCollection: traitCollection)
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        updateConstraints()
     }
     
     override func viewDidLoad() {
@@ -191,7 +220,6 @@ class PreparationController: UIViewController, UIImagePickerControllerDelegate, 
         setupUI()
         setupConstraints()
         NSLayoutConstraint.activate(sharedConstraints)
-        layoutTrait(traitCollection: UIScreen.main.traitCollection)
     }
     
     func troubleAlert(errorMessage: String, linkToSettings: Bool) {

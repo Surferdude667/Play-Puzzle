@@ -228,7 +228,6 @@ class ResultController: UIViewController {
     func configure() {
         setupUI()
         setupConstraints()
-        updateConstraints()
         self.blurView.effect = UIBlurEffect(style: UIBlurEffect.Style.dark)
         
         if let image = Tile.croppedImage {
